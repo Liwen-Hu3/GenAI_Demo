@@ -10,3 +10,18 @@ Discriminator (D): A neural network that classifies images as real (from MNIST) 
 Generator (G): A neural network that generates images from a random noise vector, aiming to produce images that are indistinguishable from real MNIST digits by the discriminator.
 
 The training process involves alternating between updating the discriminator, to better differentiate real and fake images, and updating the generator, to better fool the discriminator.
+
+## Structure of the Code
+
+The code is organized as follows:
+
+Model Definitions: Both the generator and discriminator are defined using PyTorch’s sequential module.
+
+Loss Functions: Binary Cross-Entropy (BCE) Loss is used for training both the discriminator and the generator.
+
+Optimizer: Adam optimizer is used for both models.
+
+Training Loop: The training alternates between training the discriminator on real and fake images, and training the generator to produce images that the discriminator classifies as real.
+
+## Results
+Upon successful training, the generator should be able to produce images that closely resemble the MNIST dataset digits. Sample outputs are saved in the repository, demonstrating the effectiveness of the trained model.
